@@ -1,0 +1,18 @@
+body{
+    background-color:#FDFAF8;
+}
+
+a{
+    color:#8304BE;
+    font-weight:bold;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+th{
+    background-color:#C936D7;
+}
+
+td{
+    background-color:#F0A4F7;
+}
