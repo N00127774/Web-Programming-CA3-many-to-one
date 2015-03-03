@@ -123,7 +123,24 @@ require 'ensureUserLoggedIn.php';
                 </tr>
 
                 <tr>
-                    <td></td>
+                    <td> Branch ID</td>
+                    <td>
+                     <input type="text" name="branchID" value="<?php
+                        if (isset($_POST) && isset($_POST['branchID'])) {
+                            echo $_POST['branchID'];
+                        }
+                        ?>"/>
+                        <span id="branchIDError" class="error">
+                            <?php
+                            if (isset($errorMessage) && isset($errorMessage['branchID'])) {
+                                echo $errorMessage['branchID'];
+                            }
+                            ?> 
+
+                        </span>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <input type="submit" value="Create Customer" name="CreateCustomer" />
                     </td>

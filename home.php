@@ -40,6 +40,8 @@ $statement = $gateway->getCustomers();
                     <th>Address</th>
                     <th>Date Registered</th>
                     <th> Customer ID</th>
+                    <th> Branch ID</th>
+                    
                     <th> Options</th>
 
                 </tr>
@@ -56,6 +58,7 @@ $statement = $gateway->getCustomers();
                 echo '<td>' . $row['address'] . '</td>';
                 echo '<td>' . $row['dateRegistered'] . '</td>';
                 echo '<td>' .$row['customerID'] . '</td>';
+                 echo '<td>' .$row['branchID'] . '</td>';
 
                 // this is to see the view/delete links in my home page with the list of customers
                 echo '<td>'

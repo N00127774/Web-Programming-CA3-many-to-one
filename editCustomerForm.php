@@ -135,9 +135,26 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                         </td>
                     </tr>
                     <tr>
-
+                        <td>Branch ID </td>
                         <td>
-                            <input type="submit" value="Update Customer" name="updateCustomer" />
+                            <input type="text" name="branchID" value="<?php
+                            if (isset($_POST) && isset($_POST['branchID'])) {
+                                echo $_POST['branchID'];
+                            } else
+                                echo $row['branchID'];
+                            ?>" />
+                            <span id="branchID" class="error">
+                                <?php
+                                if (isset($errorMessage) && isset($errorMessage['branchID'])) {
+                                    echo $errorMessage['branchID'];
+                                }
+                                ?>
+                            </span>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td>
+                                 <input type="submit" value="Update Customer" name="updateCustomer" />
                         </td>
                     </tr>
                 </tbody>

@@ -40,6 +40,7 @@ $statement = $gateway->getCustomers(); //gateway method()
                     <th>Address</th>
                     <th>Date Registered</th>
                     <th>Customer ID</th>
+                    <th> branch ID</th>
 
                 </tr>
             </thead>
@@ -55,6 +56,7 @@ while ($row) {
     echo '<td>' . $row['address'] . '</td>';
     echo '<td>' . $row['dateRegistered'] . '</td>';
     echo '<td>' . $row['customerID'] . '</td>';
+    echo '<td>' . $row['branchID'] . '</td>';
     echo '</tr>';
 
     $row = $statement->fetch(PDO::FETCH_ASSOC);

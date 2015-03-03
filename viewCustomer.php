@@ -59,7 +59,12 @@ $statement = $gateway->getCustomerById($customerID);
                 echo '<tr>';
                 echo '<td>dateRegistered</td>'
                 . '<td>' . $row['dateRegistered'] . '</td>';
-              
+                echo '</tr>';
+                echo '<tr>';
+                  echo '<td>branchID</td>'
+                . '<td>' . $row['branchID'] . '</td>';
+                echo '</tr>';
+                echo '<tr>';
                 
                 echo '<td>customerID</td>'
                 .'<td>' . $row['customerID']  . '</td>';

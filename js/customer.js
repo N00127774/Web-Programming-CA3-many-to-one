@@ -15,6 +15,7 @@ window.onload = function() {
         var mobileNumber = form['mobileNumber'].value;
         var address = form['address'].value;
         var dateRegistered = form['dateRegistered'].value;
+        var branchID = form['branchID'].value;
         
         var spanElements = document.getElementsByClassName("error");
         for (var i = 0; i !== spanElements.length; i++) {
@@ -39,6 +40,11 @@ window.onload = function() {
         if (dateRegistered === "") {
             errors["dateRegistered"] = "dateregistered cannot be empty";
         }
+        
+        if (branchID === "") {
+            errors["branchID"] = "dateregistered cannot be empty";
+        }
+
 
         var valid = true;
         for (var index in errors) {

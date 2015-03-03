@@ -29,8 +29,9 @@ $mobileNumber = $_POST['mobileNumber'];
 $address = $_POST['address'];
 $dateRegistered = $_POST['dateRegistered'];
 $customerID = $_POST['id'];
+$branchID = $_POST['bId'];
 
-$gateway->updateCustomer($name, $email, $mobileNumber, $address, $dateRegistered, $customerID);
+$gateway->updateCustomer($name, $email, $mobileNumber, $address, $dateRegistered, $customerID, $branchID);
 
 header('Location: home.php');
 

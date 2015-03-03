@@ -40,10 +40,10 @@ class CustomerTableGateway {
         return $statement;
     }
 
-    public function insertCustomer($n, $e, $m, $a,$cID,$d) {
+    public function insertCustomer($n, $e, $m, $a, $d, $cID, $bId) {
         $sqlQuery = "INSERT INTO customers " .
-                "(name,email, mobileNumber, address, dateRegistered) " .
-                "VALUES (:name, :email, :mobileNumber, :address, :customerID, :dateRegistered)";
+                "(name,email, mobileNumber, address,dateRegistered, customerID, branchID) " .
+                "VALUES (:name, :email, :mobileNumber, :address, :dateRegistered, :customerID, :branchID)";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -51,8 +51,9 @@ class CustomerTableGateway {
             "email" => $e,
             "mobileNumber" => $m,
             "address" => $a,
-            "customerID"=>$cID,
             "dateRegistered" => $d,
+            "customerID"=>cID,
+            "branchID"=>$bId
             
         );
 
@@ -99,13 +100,14 @@ class CustomerTableGateway {
     }
 
     //function to update the customer
-    public function updateCustomer($n, $e, $m, $a, $d, $cID) {
+    public function updateCustomer($n, $e, $m, $a, $d, $cID, $bId) {
         $sqlQuery = "UPDATE customers SET " .
                 "name = :name, " .
                 "email = :email, " .
                 "mobileNumber = :mobileNumber, " .
                 "address = :address, " .
-                "dateRegistered = :dateRegistered " .
+                "dateRegistered = :dateRegistered, " .
+                "branchID= :branchID " .
                 "WHERE customerID = :customerID";
 
         $statement = $this->connection->prepare($sqlQuery);
@@ -115,7 +117,8 @@ class CustomerTableGateway {
             "mobileNumber" => $m,
             "address" => $a,
             "dateRegistered" => $d,
-            "customerID" => $cID
+            "customerID" => $cID,
+            "branchID"=> $bId
         );
 
         /* echo '<pre>';

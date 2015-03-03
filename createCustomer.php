@@ -13,7 +13,7 @@ if ($id == "") {
 
 
 
-$name = $_POST['name'];
+
 
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -31,12 +31,14 @@ $emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
   The filter_input is commonly used for security purposes
   to prevent hackers/attackers from attempting to access or crash the system
  */
+$name =  filter_input(INPUT_POST, 'name', FILTER_SANITIZE_EMAIL);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $mobileNumber = filter_input(INPUT_POST, 'mobileNumber', FILTER_SANITIZE_STRING);
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $dateRegistered = filter_input(INPUT_POST, 'dateRegistered', FILTER_SANITIZE_STRING);
+$branchID = filter_input(INPUT_POST, 'branchID', FILTER_SANITIZE_STRING);
 
 
 /* Empty error message array that prints out warnings 
@@ -63,12 +65,15 @@ if ($dateRegistered === FALSE || $dateRegistered === '') {
     $errorMessage['dateRegistered'] = '* you left  date Registered blank! <br/>';
 }
 
+if ($branchID === FALSE || $branchID === '') {
+    $errorMessage['branchID'] = '* you left branch ID blank! <br/>';
+}
 
 
 if (empty($errorMessage)) {
     $connection = Connection::getInstance();
     $gateway = new CustomerTableGateway($connection);
-    $id = $gateway->insertCustomer($name, $email, $mobileNumber, $address, $dateRegistered);
+    $id = $gateway->insertCustomer($name, $email, $mobileNumber, $address, $dateRegistered, $branchID);
 
 
 
