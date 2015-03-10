@@ -16,3 +16,461 @@ th{
 td{
     background-color:#F0A4F7;
 }
+
+.BigLogo{
+width:60px;
+height:60px;
+}
+
+/*HomePage*/
+
+/*My own style sheet */
+/*Navbar for top of the website*/
+.navbar
+{
+	border: none;
+	background-color:#7838cd;
+	font:white;
+	margin-bottom:0px;
+	padding-bottom: 0px;
+}
+
+
+.shares{
+color:purple;
+}
+/* getting the navbar to go across*/
+.navbar-inverse .navbar-nav > li 
+{
+display:inline; 
+
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+  color : white;
+  
+}
+
+.navbar-inverse .navbar-toggle 
+{
+color:#ffffff;
+font-weight: bold;
+border-color:white;
+}
+
+/* to change the color wen u hover on the home button*/
+.navbar-inverse .navbar-toggle:hover {
+background-color:#9932CC;
+color:white;
+}
+/* changing the glyphicons colour*/
+
+
+
+/*  Changing the background colour of navbar when you rollover them and also the active menu(menu clicked)*/
+
+
+ul.nav a
+{ 
+	color: white !important;
+	font-weight: bold;
+}
+
+ul.nav a:hover,
+ul.nav a:focus,
+ul.nav a:active
+{ 
+	color: white !important; 
+	background: #5d17ba !important;
+	font-weight: bold;
+}
+
+
+
+
+
+/*.btn-primary{
+width:250px;
+background-color:rgba(0,0,0,0);
+border-color:white;
+
+}*/
+
+.btn-primary{
+
+	color: white;
+	
+	background-color:rgba(0,0,0,0);
+	border: 3px solid white;
+	font-weight: bold;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  /*background-color: ;*/
+  color: white;
+  background-color: #6e28c9;
+  border : 3px solid white;
+  font-weight: bold;
+}
+
+.jumbotron
+{
+	background-image: url(../img/hipsterofficeBig.jpg);
+	background-repeat: no-repeat;
+	
+	min-height:1100px;
+	
+	
+	
+	/*margin-top: 50px;*/
+	/* background: #99CDC9; */
+}
+
+.jumbotron h1
+{
+	color: white;
+	margin-top: 350px;
+	margin-bottom: 30px;
+	
+}
+
+.btn-info{
+color:white;
+}
+
+.Topbody{
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+font-size: 21px;
+margin-bottom:100px;
+}
+.Topbody h1{
+margin-bottom:30px;
+}
+
+
+p{
+color: rgb(85, 85, 85);
+
+}
+
+/*About service Section*/
+
+
+.AboutServices{
+margin-top:20px;
+margin-bottom:90px;
+
+}
+
+/*Icons for the shares,stock and properties*/
+
+
+.servicesiconsize
+{
+height : 70px;
+width : 70px;
+}
+
+.AboutOurTeam h1{
+text-align: center;
+margin-top:65px;
+margin-bottom:60px;
+
+
+}
+
+.AboutOurTeam h2{
+color: #616161;
+}
+ 
+ .Teams{
+ /*background-color:#7838cd;*/
+ }
+
+ .p{
+ padding:10px;
+ }
+ 
+ h1{
+ font-size: 50px;
+ text-transform: uppercase;
+font-family:  'Lato', sans-serif;
+letter-spacing: 2px;
+ }
+
+
+/* making the image fit in proper without cutting anything*/
+body
+{
+	padding-top: 50px;
+}
+
+.icon-larger:before 
+{
+  font-size: 90px;
+}
+
+
+.center{
+text-align:center;
+}
+
+.greytxt{
+color:#000000;
+}
+
+.TopIcons{
+border:none;
+}
+/*setttings for the thumbnails used*/
+.thumbnail {
+margin-top:40px;
+padding:10px;
+}
+.thumbnail a{
+color: #616161;
+}
+
+.imageMargTextMargin-top{
+margin-top:35px;
+margin-bottom:10px;
+}
+
+ .JobSpecs{
+color: #ba68c8;
+font-weight: bold;
+
+}
+.Asset a{
+text-decoration:none;
+border-bottom:2px solid #E0E0E0;
+margin-top:25px;
+font-weight:bold;
+}
+
+.Asset h2
+{
+	color: #616161;
+}
+
+.Asset p
+{
+	color: #616161;
+}
+
+
+
+
+.Topbody p{
+font-size:25px;
+ color:rgb(119, 119, 119);
+letter-spacing:-1.0px;
+}
+.QuoteAboutUs{
+font-size:30px;
+}
+
+blockquote {
+  background: #ffffff;
+
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #E0E0E0;
+  content: open-quote;
+  font-size: 13em;
+  line-height: 0.1em;
+  margin-right: 0.0em;
+  vertical-align: -0.4em;
+
+  }
+
+  blockquote:after {
+  color: #E0E0E0;
+  content: close-quote;
+  font-size: 12em;
+  line-height: 0.1em;
+  margin-left: 0.15em;
+  vertical-align: -0.6em;
+ 
+
+  }
+  
+
+  
+  blockquote p {
+  display: inline;
+}
+
+/* button for the image with Iphone nd lappy*/
+.btn-contact
+{
+	color: #f5f5f5;
+	background-color: #BA68C8;
+	border: none;
+    font-weight: bold;
+	margin-top:30px;
+}
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active,
+.btn-contact.active,
+.open .dropdown-toggle.btn-contact {
+  color: white;
+  background-color:#16a085;
+  border: none;
+  font-weight: bold;
+}
+
+.moveleft{
+margin-left:-50px;
+}
+
+.IntershipText{
+ letter-spacing: -2px;
+}
+
+
+.AboutOurTeam{
+margin-bottom:50px;
+}
+
+.InternshipSec{
+margin-top:50px;
+margin-bottom:40px;
+
+}
+
+.thumbnail
+{
+	border: none;
+	background-color: transparent;
+}
+
+/*workers with us */
+.teamcontainer
+{
+	background-color:#f5f5f5;
+}
+
+.transparent
+{
+	background-color: transparent;
+}
+
+/*level2 CSS*/
+
+.CRUID{
+margin-top:40px;
+
+
+}
+.CRUID li{
+display:inline;
+
+}
+
+/* The sidebar*/
+
+.TableTxt{
+color:#fffff;
+
+}
+
+
+.adminoptionicons{
+max-height:200x;
+max-width:200px;
+}
+
+
+.placeholders {
+margin-bottom: 30px;
+text-align: center;
+}
+.row {
+margin-right: -15px;
+margin-left: -15px;
+}
+
+/*footer*/
+.footer{
+background-color:#7838cd;
+margin-top:40px;
+
+}
+
+.footer h2{
+margin-bottom:40px;
+}
+
+.footer li,p, h2{
+color:white;
+}
+
+.footer li{
+list-style:none;
+margin-top:10px;
+}
+
+/* not working*/
+.control-label-email {
+color:#fffff;
+}
+/* Giving the footer margin-top to space it out*/
+
+.sidebar{
+background:#7838cd;
+font:grey;
+margin-top:-1px;
+}
+
+ .nav-sidebar > li > a 
+{
+color:#E0E0E0;
+}
+.nav-sidebar  > li > a:hover
+{
+background-color:#ba68c8;
+
+}
+
+.nav-sidebar{
+color:white;
+}
+
+
+.adminoptionicons{
+Max-width:80px;
+Min-height:80px;
+}
+
+
+
+
+.bigImage2{
+width:100%;
+background-repeat:no-repeat;
+}
+
+.btn-Share{
+color: #ffffff;
+	margin-top:10px;
+	background-color:#7838cd;
+	border: 2px solid #000000;
+	font-weight: bold;
+	
+}
+
+.btn-submit{
+background-color:#ba68c8;
+color:white;
+}

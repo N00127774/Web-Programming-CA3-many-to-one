@@ -15,8 +15,6 @@ if ($id == "") {
 
 
 
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
 
 //$email = $_POST['email'];
 /* $mobileNumber = $_POST['mobileNumber'];
@@ -33,8 +31,6 @@ $emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
  */
 $name =  filter_input(INPUT_POST, 'name', FILTER_SANITIZE_EMAIL);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$emailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $mobileNumber = filter_input(INPUT_POST, 'mobileNumber', FILTER_SANITIZE_STRING);
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $dateRegistered = filter_input(INPUT_POST, 'dateRegistered', FILTER_SANITIZE_STRING);
@@ -45,16 +41,19 @@ $branchID = filter_input(INPUT_POST, 'branchID', FILTER_SANITIZE_STRING);
   depending  on the users action if he leaves th any section blank. */
 
 $errorMessage = array();
-if ($email === FALSE || $email === '') {
-    $errorMessage['email'] = '* You left email blank !<br/>';
-}
 
 if ($name === FALSE || $name === '') {
     $errorMessage['name'] = '* you left name blank !<br/>';
 }
 
+if ($email === FALSE || $email === '') {
+    $errorMessage['email'] = '* You left email blank !<br/>';
+}
+
+
+
 if ($mobileNumber === FALSE || $mobileNumber === '') {
-    $errorMessage['mobileNumber'] = '* You left mobilenumber blank!<br/>';
+    $errorMessage['mobileNumber'] = '* You left mobileNumber blank!<br/>';
 }
 
 if ($address === FALSE || $address === '') {

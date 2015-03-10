@@ -13,7 +13,7 @@ class Customer {
     
 
     // This part is  known as your construction
-    public function __construct($n, $e, $m, $a, $d,$cID,$bId) {
+    public function __construct($n, $e, $m, $a, $d, $cID, $bId) {
         $this->name = $n;
         $this->email = $e;
         $this->mobileNumber = $m;

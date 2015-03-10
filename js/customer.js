@@ -42,7 +42,7 @@ window.onload = function() {
         }
         
         if (branchID === "") {
-            errors["branchID"] = "dateregistered cannot be empty";
+            errors["branchID"] = "Branch cannot be empty";
         }
 
 

@@ -16,7 +16,7 @@ require 'ensureUserLoggedIn.php';
 
 
         <!-- validation linking back to javascript  and php too-->
-        <form id="createCustomerForm" action="CreateCustomer.php" method="POST">
+        <form id="createCustomerForm" action="createCustomer.php" method="POST">
             <!-- this is the table that as all this information in it, so the table makes it nice and tidy-->
             <table id="t"
                    border="1">
@@ -142,7 +142,7 @@ require 'ensureUserLoggedIn.php';
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="Create Customer" name="CreateCustomer" />
+                        <input type="submit" value="Create Customer" name="createCustomer" />
                     </td>
                 </tr>
                 </tbody>

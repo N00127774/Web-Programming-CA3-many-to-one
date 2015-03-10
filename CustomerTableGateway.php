@@ -40,10 +40,10 @@ class CustomerTableGateway {
         return $statement;
     }
 
-    public function insertCustomer($n, $e, $m, $a, $d, $cID, $bId) {
+    public function insertCustomer($n, $e, $m, $a, $d, $bId) {
         $sqlQuery = "INSERT INTO customers " .
-                "(name,email, mobileNumber, address,dateRegistered, customerID, branchID) " .
-                "VALUES (:name, :email, :mobileNumber, :address, :dateRegistered, :customerID, :branchID)";
+                "(name, email, mobileNumber, address, dateRegistered, branchID) " .
+                "VALUES (:name, :email, :mobileNumber, :address, :dateRegistered, :branchID)";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -52,26 +52,17 @@ class CustomerTableGateway {
             "mobileNumber" => $m,
             "address" => $a,
             "dateRegistered" => $d,
-            "customerID"=>cID,
-            "branchID"=>$bId
+            "branchID"=> $bId
             
         );
 
         $status = $statement->execute($params);
 
-        // echo '<pre>';
-        ///  print_r($n);
-        // echo "\n";
-        // print_r($a);
-        // echo "\n";
-        // print_r($m);
-        //echo "\n";
-        // print_r($a);
-        // echo "\n";
-        // print_r($d);
-        // echo "\n";
-        // print_r($statement);
-        // echo '</pre>';
+        echo '<pre>';
+        print_r($_POST);
+        print_r($params);
+        print_r($sqlQuery);
+        echo '</pre>';
 
         if (!$status) {
             die("Could not insert user");
@@ -117,13 +108,16 @@ class CustomerTableGateway {
             "mobileNumber" => $m,
             "address" => $a,
             "dateRegistered" => $d,
-            "customerID" => $cID,
+            "customerID"=>$cID,
             "branchID"=> $bId
         );
 
-        /* echo '<pre>';
+      /*  echo '<pre>';
+         
+          print_r($_POST );
           print_r($params );
-          echo '</pre>'; */
+             print_r($sqlQuery);
+          echo '</pre>';*/
 
         $status = $statement->execute($params);
 
