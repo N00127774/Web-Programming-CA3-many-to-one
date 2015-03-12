@@ -42,7 +42,7 @@
 						<li><a href="#">About US <span class=" glyphicon glyphicon-user "></span></a></li>
 						<li><a href="#">Sign Up <span class=" glyphicon glyphicon-pencil "></span></a></li>
                                                 <li><a href="#">Contact Us <span class=" glyphicon glyphicon-envelope "></span></a> </li>
-                                                <li><a href="login.html">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                                                <li><a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a></li>
 					</ul>
 				</div>
 			</div>

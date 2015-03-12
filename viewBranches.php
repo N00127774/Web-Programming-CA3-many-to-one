@@ -1,7 +1,7 @@
 <?php
 require_once 'Customer.php';
 require_once 'Connection.php';
-require_once 'CustomerTableGateway.php';
+require_once 'BranchTableGateway.php';
 
 $id = session_id();
 if ($id == "") {
@@ -13,12 +13,12 @@ require 'ensureUserLoggedIn.php';
 if (!isset($_GET) || !isset($_GET['id'])) {
     die('Invalid request');
 }
-$customerID = $_GET['id'];
+$branchID = $_GET['id'];
 
 $connection = Connection::getInstance();
-$gateway = new CustomerTableGateway($connection);
+$gateway = new BranchTableGateway($connection);
 
-$statement = $gateway->getCustomerById($customerID);
+$statement = $gateway->getCustomerById($branchID);
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,47 +36,37 @@ $statement = $gateway->getCustomerById($customerID);
             echo '<p>' . $message . '</p>';
         }
         ?>
+        
+        
+      
         <table border="1">
             <tbody>
                 <?php
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                 echo '<tr>';
-                echo '<td>Name</td>'
-                . '<td>' . $row['name'] . '</td>';
-                echo '</tr>';
-                echo '<tr>';
-                echo '<td>Email</td>'
-                . '<td>' . $row['email'] . '</td>';
-                echo '</tr>';
-                echo '<tr>';
-                echo '<td>Mobile</td>'
-                . '<td>' . $row['mobileNumber'] . '</td>';
-                echo '</tr>';
-                echo '<tr>';
                 echo '<td>Address</td>'
                 . '<td>' . $row['address'] . '</td>';
                 echo '</tr>';
                 echo '<tr>';
-                echo '<td>dateRegistered</td>'
-                . '<td>' . $row['dateRegistered'] . '</td>';
+                echo '<td>Number</td>'
+                . '<td>' . $row['number'] . '</td>';
                 echo '</tr>';
                 echo '<tr>';
-                  echo '<td>managerName</td>'
+                echo '<td>OpeningHours</td>'
+                . '<td>' . $row['openingHours'] . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>ManagerName</td>'
                 . '<td>' . $row['managerName'] . '</td>';
                 echo '</tr>';
                 echo '<tr>';
-                
-                echo '<td>customerID</td>'
-                .'<td>' . $row['customerID']  . '</td>';
-                
-                
-                echo '</tr>';
-                echo '<tr>';
+            
+               
                 ?>
             </tbody>
         </table>
         <p>
-            <a href="editCustomerForm.php?id=<?php echo $row['customerID']; ?>">
+            <a href="editCuForm.php?id=<?php echo $row['customerID']; ?>">
                 Edit Customer</a>
             <a class="deleteCustomer" href="deleteCustomer.php?id=<?php echo $row['customerID']; ?>">
                 Delete Customer</a> <!-- to links at the bottom of table to edit customer and delete customer-->
