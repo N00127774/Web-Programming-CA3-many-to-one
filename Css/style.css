@@ -9,13 +9,7 @@ a{
     margin-right:5px;
 }
 
-th{
-    background-color:#C936D7;
-}
 
-td{
-    background-color:#F0A4F7;
-}
 
 .BigLogo{
 width:60px;
@@ -90,12 +84,6 @@ ul.nav a:active
 
 
 
-/*.btn-primary{
-width:250px;
-background-color:rgba(0,0,0,0);
-border-color:white;
-
-}*/
 
 .btn-primary{
 
@@ -431,7 +419,10 @@ color:#fffff;
 background:#7838cd;
 font:grey;
 margin-top:-1px;
+height:100%;
+z-index:-1;
 }
+
 
  .nav-sidebar > li > a 
 {
@@ -473,4 +464,194 @@ color: #ffffff;
 .btn-submit{
 background-color:#ba68c8;
 color:white;
+}
+
+/*level 2styles*/
+
+.sidebar{
+background:#808080;
+padding-bottom:100%;
+margin-top:-1px;
+}
+
+ .nav-sidebar > li > a 
+{
+color:white;
+}
+.nav-sidebar  > li > a:hover
+{
+background-color:#ba68c8;
+
+}
+
+
+.adminoptions{
+background-color:white;
+}
+
+.adminoptions h2{
+color:black;
+}
+
+
+
+.placeholders,h1{
+color:grey;
+background-color:e0e0e0;
+}
+
+
+/*side bar background set to pink*/
+.nav-sidebar  .glyphicon{
+color:white;
+}
+/*chat background set to pink*/
+.chat.badge{
+background-color:#ff6c60;
+}
+
+.mmm.badge{
+background-color:#6ccac9;
+}
+
+th{
+background-color:#7838cd;
+}
+
+ .customers{
+font-size:80px;
+}
+
+
+
+.glyphicon-signal{
+font-size:80px;
+}
+
+
+
+.SalesBG{
+/*background-color:#f8d347;*/
+}
+
+/*Login Page style*/
+
+/*Register Page*/
+
+
+/*Background Image*/
+
+.BackgroundImage{
+    background-image: url(../img/backGround2.jpg);
+}
+
+.form-control .email{
+    padding-right:-16px;
+}
+div.well{
+  height: 250px;
+} 
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 50%; 
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.btn-login
+{
+   background-color:rgba(0,0,0,0);
+	border: 1px solid white;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active
+{
+    background-color: #eb98fb;;
+    color: white;
+}
+
+
+.GOBACK{
+    margin-top:20px;
+    
+}
+
+.GOBACK a{
+   TEXT-DECORATION:NONE; 
+}
+
+.checkbox
+{
+    color: white;
+    font-weight: bold;
+}
+
+.form-group{
+    color:white;
+}
+
+.form-group a
+{
+    color:white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+.form-group a:hover
+{
+    color:#eb98fb;
+}
+
+.SignIN{
+
+    margin-bottom:30px;
+}
+
+.Register{
+     margin-left:38px;
+    margin-bottom:30px;
+}
+
+.placeholders .thumbnail{
+   
+    border:1px solid #7838cd;
+    
+}
+
+.graph{
+    background:#eaeaea;
+}
+
+/*Badges and table of Members*/
+
+.green{
+    background-color:#9cc96b;
+}
+
+
+td{
+    color:#9d9e9f;
+}
+
+.Member a{
+    color:#689cc9;
+}
+
+.blue{
+    background-color:#4ebcda;
+}
+
+.light-purple{
+    background-color:#986291;
 }
