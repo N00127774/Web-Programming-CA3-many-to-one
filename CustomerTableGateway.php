@@ -10,7 +10,9 @@ class CustomerTableGateway {
 
     public function getCustomers() {
         // execute a query to get all customers
-        $sqlQuery = "SELECT * FROM customers";
+        $sqlQuery = "SELECT c.*, b.managerName As managerName 
+                     FROM   customers c
+                     LEFT JOIN branches b ON b.branchID = c.branchID" ;
 
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -26,7 +28,8 @@ class CustomerTableGateway {
         // execute a query to get the user with the specified id
         $sqlQuery =  "SELECT c.*, b.managerName  
                       FROM customers c
-                    LEFT JOIN branches b on b.branchID = c.branchID";
+                    LEFT JOIN branches b on b.branchID = c.branchID
+                    WHERE c.customerID = :cID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -93,14 +96,14 @@ class CustomerTableGateway {
     }
 
     //function to update the customer
-    public function updateCustomer($n, $e, $m, $a, $d, $cID, $bID) {
+    public function updateCustomer($n, $e, $m, $a, $d,  $bID, $cID) {
         $sqlQuery = "UPDATE customers SET " .
                 "name = :name, " .
                 "email = :email, " .
                 "mobileNumber = :mobileNumber, " .
                 "address = :address, " .
                 "dateRegistered = :dateRegistered, " .
-                "branchID= :branchID " .
+                "branchID = :branchID " .
                 "WHERE customerID = :customerID";
 
         $statement = $this->connection->prepare($sqlQuery);
@@ -110,18 +113,24 @@ class CustomerTableGateway {
             "mobileNumber" => $m,
             "address" => $a,
             "dateRegistered" => $d,
-            "customerID"=>$cID,
-            "branchID"=> $bID
+            "branchID" => $bID,
+            "customerID"=> $cID
+            
         );
 
-      /*  echo '<pre>';
+      echo '<pre>';
          
           print_r($_POST );
           print_r($params );
              print_r($sqlQuery);
-          echo '</pre>';*/
+          echo '</pre>';
 
         $status = $statement->execute($params);
+        
+        if(!$status)
+        {
+            die("Could not insert customer");
+        }
 
         return ($statement->rowCount() == 1);
     }

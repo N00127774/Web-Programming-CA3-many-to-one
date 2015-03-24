@@ -12,43 +12,44 @@
         <link href="css/font-awesome.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="styles/ihover.css" rel="stylesheet"> <!-- for the images and effects on them-->
-     
+
         <link href='http://fonts.googleapis.com/css?family=Lato:400,900|Kreon' rel='stylesheet' type='text/css'>
 
     </head>
 
     <body>
-        
 
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<!-- Dropdown Menu for Mobile Devices -->
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-                            <a class="navbar-brand" href="index.html">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""></a>
-			</div>
-							
-			<div class="collapse navbar-collapse" id="collapse">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Home <span class=" glyphicon glyphicon-home"></span></a></li>
-						<li><a href="#">About US <span class=" glyphicon glyphicon-user "></span></a></li>
-						<li><a href="#">Sign Up <span class=" glyphicon glyphicon-pencil "></span></a></li>
-                                                <li><a href="#">Contact Us <span class=" glyphicon glyphicon-envelope "></span></a> </li>
-                                                <li><a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-           
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Dropdown Menu for Mobile Devices -->
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs" href="index.php">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""> </a>
+                    <a class="navbar-brand visible-xs" href="index.php"> <p> ASPM | AGENCY</p></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="collapse">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home <span class=" glyphicon glyphicon-home"></span></a></li>
+                            <li><a href="#">About US <span class=" glyphicon glyphicon-user "></span></a></li>
+                            <li><a href="#">Contact Us <span class=" glyphicon glyphicon-envelope "></span></a> </li>
+                            <li><a href="register.php ">Sign Up <span class=" glyphicon glyphicon-pencil "></span></a></li>
+                            <li><a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
 
 
 
@@ -96,6 +97,11 @@
                 </div>
 
             </div><!-- end of Our service row  with  Our service text -->
+           
+            
+            
+            
+            <!-- Start of AboutService row-->
             <div class="row  AboutServices">
 
                 <div class="col-lg-4">
@@ -104,8 +110,8 @@
 
                         <h2 class="center greytxt"> Shares </h2>
                         <div class="text-center">
-                            <p class="greytxt"> The very qualities which recommend it to outdoor signage — ease of reading at a distance, and features durable 
-                                enough to withstand the elements make Gotham an excellent choice for small sizes as well.</p>
+                            <p class="greytxt"> You can now start buying shares by joining our branch,  or by setting up an online account with us, 
+                                The two main types of shares are common shares and preferred shares.</p>
 
                             <button type="button" class="btn btn-Share ">Read More</button>
 
@@ -118,10 +124,11 @@
                 <div class="col-lg-4">
                     <div class="thumbnail ">
                         <img src="img/house12.png" class="img-responsive icons" alt="">
-                        <h2 class="center greytxt"> Shares </h2>
+                        <h2 class="center greytxt"> Property </h2>
                         <div class="text-center">
-                            <p class="greytxt"> The very qualities which recommend it to outdoor signage — ease of reading at a distance, and features durable 
-                                enough to withstand the elements make Gotham an excellent choice for small sizes as well.</p>
+                            <p class="greytxt">We also deal with properties, if you are interested in buying properties, or owning a property you
+                                can now do this by joining our company. We are reliable and trustworthy and will keep all your details safe.
+                            </p>
 
                             <button type="button" class="btn btn-Share ">Read More</button>
 
@@ -135,8 +142,8 @@
                         <img src="img/stats9.png" class="img-responsive icons"alt="">
                         <h2 class="center greytxt"> Stocks </h2>
                         <div class="text-center">
-                            <p class="greytxt"> The very qualities which recommend it to outdoor signage — ease of reading at a distance, and features durable 
-                                enough to withstand the elements make Gotham an excellent choice for small sizes as well.</p>
+                            <p class="greytxt"> As you've probably guessed, we're talking about owning stocks. This fabulous category of financial instruments is, 
+                                without a doubt, one of the greatest tools ever invented for building wealth.</p>
 
                             <button type="button" class="btn btn-Share ">Read More</button>
 
@@ -146,18 +153,23 @@
                 <hr></hr>
             </div>
         </div>
+          <!-- End of AboutService row-->
 
-
+          
+          
+          
+          
+          
         <div class="container-fluid teamcontainer">
             <div class="row AboutOurTeam">
 
                 <div class="text-center ">
-                    <h2 class="text-center"><span class=" glyphicon glyphicon-arrow-left "></span>About Our Team <span class=" glyphicon glyphicon-arrow-right "></span></h2>
+                    <h2 class="text-center"><span class=" glyphicon glyphicon-arrow-left "></span> About Our Team <span class=" glyphicon glyphicon-arrow-right "></span></h2>
                 </div>
 
 
 
-                <!--Start of the rounded images wioth text under-->
+             <!--Start of  the responsive circles -->
                 <div class="col-lg-4 Asset transparent">
                     <div class="thumbnail">
 
@@ -188,7 +200,7 @@
 
                 <div class="col-lg-4 Asset transparent">
                     <div class="thumbnail">
-                        <!-- normal -->
+                        
                         <center>
                             <div class="ih-item circle effect1"><a href="#">
 
@@ -210,7 +222,7 @@
 
                         </center>
 
-                        <!-- end normal -->
+                     
                     </div>
                 </div>
 
@@ -220,7 +232,7 @@
 
                 <div class="col-lg-4 Asset transparent">
                     <div class="thumbnail">
-                        <!-- normal -->						<center>
+                       <center>
                             <div class="ih-item circle effect1"><a href="#">
                                     <div class="spinner"></div>
                                     <div class="img  "><img src="img/Branch.jpg " alt="img" class="ImageMargin"></div>
@@ -240,7 +252,11 @@
                 </div>
             </div>
         </div>
-        <!-- end normal -->		
+         <!--End of  the responsive circles -->
+        
+      
+        
+           <!--Start of the Intership row, with intership and button -->
         <div class="container ">
 
             <div class="row InternshipSec">
@@ -259,16 +275,70 @@
 
             </div>
 
+            <hr></hr>
 
+            <h1 class="text-center"> OUR CLIENTS SAY....</h1>
+           
             <!-- big Image Part-->
-            <div class="container">
-                <div class= "col-lg-6">
-                    <img src="img/bigimage2.png" alt="" class="img-responsive push-right ">
+            <div class="container Clients col-lg-12">
+                <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                    <div class="thumbnail ">
+                        <p>"ASSP Agency are highly educated, they know what they are talking about, and they for their clients." </p>
+
+
+
+                    </div>
+
+
+                    <img src="img/whiteMan.png" alt="" class="img-responsive img-circle circleImages  ">
                 </div>
 
-                <div class= "col-lg-6">
-                    <img src="img/bigimage2.png" alt="" class="img-responsive circle-image  ">
+                <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                    <div class="thumbnail  ">
+                        <p>"The team in Cork provide a first class service. A fantastic Agency ASPM Agency" </p>
+
+
+                    </div>
+
+
+                    <img src="img/chinese.png" alt="" class="img-responsive img-circle circleImages ">
                 </div>
+
+
+                <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                    <div class="thumbnail">
+
+                        <p>"I appreciate everything your team does for us. 
+                            I do think your team is outstanding"
+                        </p>
+
+
+                    </div>
+
+
+                    <img src="img/guySuit.png" alt="" class="img-responsive img-circle circleImages ">
+
+                </div>
+
+
+                <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                    <div class="thumbnail ">
+                        <p>"I appreciate your kind assistance immensely.  I will be sure to recommend your services".
+
+                        </p>
+
+
+                    </div>
+
+                    <img src="img/chrisBeard.png" alt="" class="img-responsive img-circle circleImages  ">
+                </div>
+
+
+
 
             </div>
         </div>
@@ -277,72 +347,74 @@
 
 
 
-
+        <!--Footer for the Home Page-->
         <div class="container-fluid footer">
-            <div class="footer">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h2>Contact Information <span class=" glyphicon glyphicon-phone-alt"></h2>
-                        <li> Some Address 987,NY</li>
-                        <li> <span class=" glyphicon glyphicon-earphone"> tel:00353439359894</li>
-                        <li> <span class=" glyphicon glyphicon-phone"> tel:00353439359894</li>
-                        <li> <span class="glyphicon glyphicon-folder-close"></span> AsssetManagementagency@yahoo.ie</li>
-                        <li> <span class="glyphicon glyphicon-briefcase" ></span>@Asset_co</li>
-                        <li>  <span class=" glyphicon glyphicon-lock "></span> BaabatundeAgency</li> 
-                    </div>
+            <div class="container footer">
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h2>Contact Information <span class=" glyphicon glyphicon-phone-alt"></h2>
+                            <li> Some Address 987,NY</li>
+                            <li> <span class=" glyphicon glyphicon-earphone"></span> tel:00353439359894</li>
+                            <li> <span class=" glyphicon glyphicon-phone"></span> tel:00353439359894</li>
+                            <li> <span class="glyphicon glyphicon-folder-close"></span> AsssetManagementagency@yahoo.ie</li>
+                            <li> <span class="glyphicon glyphicon-briefcase" ></span> @Asset_co</li>
+                            <li>  <span class=" glyphicon glyphicon-lock "></span> BaabatundeAgency</li> 
+                        </div>
 
-                    <div class="col-lg-5">
-                        <h2>Newsletter <span class=" glyphicon glyphicon-list "></h2>
-                        <p> Register to our newsletter and be updated with the latests information regarding our services, offers
-                            and much more.
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="email">Email:</label>
-                                <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label password col-xs-2" for="pwd">Password:</label>
-                                <div class="col-sm-8 ">          
-                                    <input type="password" class="form-control " id="pwd" placeholder="Enter password">
-                                </div>
-                            </div>
-                            <div class="form-group">        
-                                <div class="col-sm-10">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox"> Remember me</label>
+                        <div class="col-lg-5">
+                            <h2>Newsletter <span class=" glyphicon glyphicon-list "></h2>
+                            <p> Register to our newsletter and be updated with the latest information regarding our services, offers
+                                and much more.
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="control-label col-xs-2" for="email">Email:</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control email" id="email" placeholder="Enter email">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">        
-                                <div class=" col-sm-12">
-                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-2" for="pwd">Password:</label>
+                                    <div class="col-sm-8 ">          
+                                        <input type="password" class="form-control " id="pwd" placeholder="Enter password">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                                <div class="form-group">        
+                                    <div class="col-sm-10">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox"> Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">        
+                                    <div class=" col-sm-12">
+                                        <button type="submit" class="btn btn-submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
 
 
-                    <div class="col-lg-3">
-                        <h2>Opening Hours  <span class=" glyphicon glyphicon-time "></h2>
-                        <li> Monday 9:00am-5:00pm</li>
-                        <li> Tuesday 9:00am-5:00pm</li>
-                        <li> Wednesday9:00am-5:00pm</li>
-                        <li> Thursday 9:00am-5:00pm</li>
-                        <li> Friday 9:00am-5:00pm</li>
+                        <div class="col-lg-3">
+                            <h2>Opening Hours  <span class=" glyphicon glyphicon-time "></h2>
+                            <li> Monday 9:00am-5:00pm</li>
+                            <li> Tuesday 9:00am-5:00pm</li>
+                            <li> Wednesday9:00am-5:00pm</li>
+                            <li> Thursday 9:00am-5:00pm</li>
+                            <li> Friday 9:00am-5:00pm</li>
+
+                        </div>
 
                     </div>
 
                 </div>
-
             </div>
-
+            <!-- End of Footer-->
 
 
 
         </div>
- 
+
 
 
 

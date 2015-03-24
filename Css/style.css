@@ -2,21 +2,78 @@ body{
     background-color:#FDFAF8;
 }
 
+/* making the image fit in proper without cutting anything*/
+body
+{
+	padding-top: 50px;
+}
 a{
-    color:#fffff;
+  color:black;
     font-weight:bold;
     margin-left:5px;
     margin-right:5px;
+    text-decoration: none !important;
+     font-weight:normal;
+   
+}
+
+a:hover{
+    color:white;
+  
+ 
+}
+
+h4{
+    
+  color:grey;  
+}
+
+
+p{
+color: rgb(85, 85, 85);
+
 }
 
 
 
+/*footer*/
+.footer{
+background-color:#7838cd;
+
+
+}
+
+.footer h2{
+margin-bottom:40px;
+}
+
+.footer li,p, h2{
+color:white;
+}
+
+.footer li{
+list-style:none;
+margin-top:10px;
+}
+
+/* not working*/
+.control-label-email {
+color:#fffff;
+}
+/* Giving the footer margin-top to space it out*/
+
+/* HomePage     */
+
+/*-----------------------------------------------------------------/
+
+
+/*  Changing the background colour of navbar when you rollover them and also the active menu(menu clicked)*/
 .BigLogo{
 width:60px;
 height:60px;
 }
 
-/*HomePage*/
+
 
 /*My own style sheet */
 /*Navbar for top of the website*/
@@ -28,44 +85,6 @@ height:60px;
 	margin-bottom:0px;
 	padding-bottom: 0px;
 }
-
-
-.shares{
-color:purple;
-}
-
-
-/* getting the navbar to go across*/
-.navbar-inverse .navbar-nav > li 
-{
-display:inline; 
-
-}
-
-
-.navbar-inverse .navbar-nav > li > a {
-  color : white;
-  
-}
-
-.navbar-inverse .navbar-toggle 
-{
-color:#ffffff;
-font-weight: bold;
-border-color:white;
-}
-
-/* to change the color wen u hover on the home button*/
-.navbar-inverse .navbar-toggle:hover {
-background-color:#9932CC;
-color:white;
-}
-/* changing the glyphicons colour*/
-
-
-
-/*  Changing the background colour of navbar when you rollover them and also the active menu(menu clicked)*/
-
 
 ul.nav a
 { 
@@ -84,7 +103,32 @@ ul.nav a:active
 
 
 
+/* getting the navbar to go across*/
+.navbar-inverse .navbar-nav > li 
+{
+display:inline; 
 
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+  color : white;
+  
+}
+
+/*Navbar wen u scale it down*/
+.navbar-inverse .navbar-toggle 
+{
+color:#ffffff;
+font-weight: bold;
+border-color:white;
+}
+
+/* to change the color wen u hover on the home button*/
+.navbar-inverse .navbar-toggle:hover {
+background-color:#9932CC;
+color:white;
+}
 
 
 .btn-primary{
@@ -143,11 +187,113 @@ margin-bottom:100px;
 margin-bottom:30px;
 }
 
+/* this if for the big text inside Quotes*/
+blockquote {
+  background: #ffffff;
 
-p{
-color: rgb(85, 85, 85);
-
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
+blockquote:before {
+  color: #E0E0E0;
+  content: open-quote;
+  font-size: 13em;
+  line-height: 0.1em;
+  margin-right: 0.0em;
+  vertical-align: -0.4em;
+
+  }
+
+  blockquote:after {
+  color: #E0E0E0;
+  content: close-quote;
+  font-size: 12em;
+  line-height: 0.1em;
+  margin-left: 0.15em;
+  vertical-align: -0.6em;
+ 
+
+  }
+  
+
+  
+  blockquote p {
+  display: inline;
+}
+
+/*Text for intership*/
+.greytxt{
+color:#000000;
+}
+
+
+/* button for the image with lappy and text in intership section*/
+.btn-contact
+{
+	color: #f5f5f5;
+	background-color: #BA68C8;
+	border: none;
+    font-weight: bold;
+	margin-top:30px;
+}
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active,
+.btn-contact.active,
+.open .dropdown-toggle.btn-contact {
+  color: white;
+  background-color:#16a085;
+  border: none;
+  font-weight: bold;
+}
+
+
+
+
+
+.shares{
+color:#7838cd;
+}
+
+/*Share button and paragraph */
+.btn-Share{
+color: #ffffff;
+	margin-top:10px;
+	background-color:#7838cd;
+	border: 1px solid #000000;
+	font-weight: bold;
+	
+}
+
+
+.btn-Share:hover,
+.btn-Share:focus,
+.btn-Share:active,
+.btn-Share.active,
+.open .dropdown-toggle.btn-contact {
+  color: white;
+  background-color:#16a085;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*About service Section*/
 
@@ -195,11 +341,7 @@ letter-spacing: 2px;
  }
 
 
-/* making the image fit in proper without cutting anything*/
-body
-{
-	padding-top: 50px;
-}
+
 
 .icon-larger:before 
 {
@@ -211,14 +353,17 @@ body
 text-align:center;
 }
 
-.greytxt{
-color:#000000;
-}
+
 
 .TopIcons{
 border:none;
 }
+
+
 /*setttings for the thumbnails used*/
+
+
+
 .thumbnail {
 margin-top:40px;
 padding:10px;
@@ -267,59 +412,8 @@ letter-spacing:-1.0px;
 font-size:30px;
 }
 
-blockquote {
-  background: #ffffff;
 
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: #E0E0E0;
-  content: open-quote;
-  font-size: 13em;
-  line-height: 0.1em;
-  margin-right: 0.0em;
-  vertical-align: -0.4em;
 
-  }
-
-  blockquote:after {
-  color: #E0E0E0;
-  content: close-quote;
-  font-size: 12em;
-  line-height: 0.1em;
-  margin-left: 0.15em;
-  vertical-align: -0.6em;
- 
-
-  }
-  
-
-  
-  blockquote p {
-  display: inline;
-}
-
-/* button for the image with Iphone nd lappy*/
-.btn-contact
-{
-	color: #f5f5f5;
-	background-color: #BA68C8;
-	border: none;
-    font-weight: bold;
-	margin-top:30px;
-}
-.btn-contact:hover,
-.btn-contact:focus,
-.btn-contact:active,
-.btn-contact.active,
-.open .dropdown-toggle.btn-contact {
-  color: white;
-  background-color:#16a085;
-  border: none;
-  font-weight: bold;
-}
 
 .moveleft{
 margin-left:-50px;
@@ -357,7 +451,45 @@ margin-bottom:40px;
 	background-color: transparent;
 }
 
-/*level2 CSS*/
+/*level2 CSS*/ /*sidebar*/ /*level   2   Styling  */
+
+
+/* BUTTON USED FOR most part of the level 2 pages*/
+.btn-submit{
+background-color:#ba68c8;
+color:white;
+}
+
+.nav-sidebar{
+    margin-top:15px;
+} 
+
+.sidebar hr{
+ margin-top:2px;  
+}
+
+
+.sidebar{
+background:#616161;
+padding-bottom:2%;
+margin-top:-1px;
+
+
+}
+
+
+
+.nav-sidebar  .glyphicon{
+color:white;
+}
+
+.nav-sidebar > li > a:hover{
+    background-color: #6e28c9 !important;
+}
+
+.nav-sidebar h3{
+    color:white;
+}
 
 .CRUID{
 margin-top:40px;
@@ -369,7 +501,7 @@ display:inline;
 
 }
 
-/* The sidebar*/
+
 
 .TableTxt{
 color:#fffff;
@@ -392,50 +524,51 @@ margin-right: -15px;
 margin-left: -15px;
 }
 
-/*History Home Page*/
-.History{
-    margin-bottom:60px;
-}
-
-/*footer*/
-.footer{
-background-color:#7838cd;
-
-
-}
-
-.footer h2{
-margin-bottom:40px;
-}
-
-.footer li,p, h2{
-color:white;
-}
-
-.footer li{
-list-style:none;
-margin-top:10px;
-}
-
-/* not working*/
-.control-label-email {
-color:#fffff;
-}
-/* Giving the footer margin-top to space it out*/
-
-
-.sidebar hr{
- margin-top:2px;  
-}
-
-.sidebar{
-background:#808080;
-padding-bottom:5%;
-margin-top:-1px;
+/*Clients  Part of Home Page*/
+.Clients{
+    margin-bottom:80px;
 }
 
 
- 
+
+.Clients p{
+    color:grey
+}
+
+
+
+
+.text-algin-right{
+    margin-left:140px;
+    color:grey;
+   
+}
+
+
+.btn-ClientSpeech :hover,
+.btn-ClientSpeech :focus,
+.btn-ClientSpeech :active,
+.btn-ClientSpeech .active,
+.open .dropdown-toggle.btn-ClientsSpeech {
+  background-color:#e4a5c8;
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.placeholders .glyphicon-user{
+    color:grey;
+}
 
 
 
@@ -454,35 +587,17 @@ width:100%;
 background-repeat:no-repeat;
 }
 
-.btn-Share{
-color: #ffffff;
-	margin-top:10px;
-	background-color:#7838cd;
-	border: 2px solid #000000;
-	font-weight: bold;
-	
-}
 
-.btn-submit{
-background-color:#ba68c8;
-color:white;
-}
 
-/*level 2styles*/
 
-/*Sidebar*/
-.sidebar{
-background:#808080;
-padding-bottom:5%;
-margin-top:-1px;
-}
 
-.nav-sidebar  .glyphicon{
-color:black;
-}
+/*level   2   Styling  */
 
-.nav-sidebar > li > a:hover{
-    background-color: red !important;
+/*Sidebar for the level two Page*/
+
+
+.table-striped th{
+    color:white;
 }
 
 
@@ -521,7 +636,17 @@ background-color:#7f5ab0;
 font-size:80px;
 }
 
+.buttonsforTables{
+    color:grey
+}
 
+
+
+.buttonsforTables div:hover
+{
+    color: #F49594;
+    background-color: pink;
+}
 
 .glyphicon-signal{
 font-size:80px;
@@ -639,7 +764,7 @@ div.well{
     height:200px;
     margin-left:20px;
     margin-top:10px;
-    margin-bottom:-30px;
+    margin-bottom:30px;
 }
 .green{
     background-color:#9cc96b;
@@ -666,11 +791,31 @@ td{
     background-color:#986291;
 }
 
-.btn-view{
+
+
+
+
+/*buttons for the view Customer Page*/
+.btn-search{
     font-size:20px;
     color:white;
     background-color:#7838cd;
 }
+
+
+/*Buttons for the level two options view delete and edit*/
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active,
+.btn-search.active,
+.open .dropdown-toggle.btn-search {
+  /*background-color: ;*/
+  color: #7838cd;
+  background-color: white;
+  font-weight: normal;
+}
+
+
 
 .btn-edit{
     font-size:20px;
@@ -679,6 +824,23 @@ td{
     
 }
 
+.btn-edit:hover,
+.btn-edit:focus,
+.btn-edit:active,
+.btn-edit.active,
+.open .dropdown-toggle.btn-edit {
+  /*background-color: ;*/
+  color: #6ccac9;
+  background-color: white;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
 .btn-delete{
     font-size:20px;
     color:white;
@@ -686,16 +848,50 @@ td{
 }
 
 
+.btn-delete:hover,
+.btn-delete:focus,
+.btn-delete:active,
+.btn-delete.active,
+.open .dropdown-toggle.btn-delete {
+  /*background-color: ;*/
+  color: #d21405;
+  background-color: white;
+  font-weight: normal;
+}
+
+/*END OF THE BUTTONS*/
+
+
+
+
 .Member{
     margin-bottom:150px;
 }
 
+.circleImages{
+  
+    width:80px;
+    height:80px;
+}
 
 /*Create Customer part*/
 
 .createCus th{
-   color:white
+   color:white;
 }
 .createCus{
     margin-bottom:220px;
 }
+
+.ViewCus th{
+    color:white;
+}
+
+.Details{
+margin-bottom:80px;
+}
+
+.thumbnail .glyphicon-signal{
+    color:grey;
+}
+

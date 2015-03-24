@@ -35,7 +35,9 @@ $mobileNumber = filter_input(INPUT_POST, 'mobileNumber', FILTER_SANITIZE_STRING)
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $dateRegistered = filter_input(INPUT_POST, 'dateRegistered', FILTER_SANITIZE_STRING);
 $branchID = filter_input(INPUT_POST, 'branchID', FILTER_SANITIZE_STRING);
-
+if($branchID == -1){
+    $branchID=NULL;
+}
 
 /* Empty error message array that prints out warnings 
   depending  on the users action if he leaves th any section blank. */

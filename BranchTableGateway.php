@@ -1,6 +1,7 @@
 <?php
 
 class BranchTableGateway {
+
     private $connection;
 
     public function __construct($c) {
@@ -19,9 +20,9 @@ class BranchTableGateway {
         }
 
         return $statement;
-      }
-        
-        public function getBranchById($branchID) {
+    }
+
+    public function getBranchById($branchID) {
         // execute a query to get the user with the specified id
         $sqlQuery = "SELECT * FROM branches WHERE branchID = :bID";
 
@@ -38,8 +39,7 @@ class BranchTableGateway {
 
         return $statement;
     }
-    
-    
+
     public function insertbranch($a, $n, $o, $m) {
         $sqlQuery = "INSERT INTO branches " .
                 "(address, number, openingHours, managerName) " .
@@ -51,8 +51,6 @@ class BranchTableGateway {
             "number" => $n,
             "openingHours" => $o,
             "managerName" => $m
-           
-            
         );
 
         $status = $statement->execute($params);
@@ -71,9 +69,6 @@ class BranchTableGateway {
 
         return $id;
     }
-    
-    
-  
 
     public function deleteBranch($branchID) {
         $sqlQuery = "DELETE FROM branches WHERE branchID = :bID";
@@ -93,30 +88,29 @@ class BranchTableGateway {
     }
 
     //function to update the customer
-    public function updateBranch($a, $n, $o, $m) {
+    public function updateBranch($bID,$a, $n, $o, $m) {
         $sqlQuery = "UPDATE branches SET " .
                 "address = :address, " .
                 "number = :number, " .
                 "openingHours= :openingHours, " .
                 "managerName= :managerName " .
-               
                 "WHERE branchID = :branchID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-          "address" => $a,
+            "branchID" => $bID,
+            "address" => $a,
             "number" => $n,
             "openingHours" => $o,
             "managerName" => $m
-           
         );
 
-      /*  echo '<pre>';
-         
+          echo '<pre>';
+
           print_r($_POST );
           print_r($params );
-             print_r($sqlQuery);
-          echo '</pre>';*/
+          print_r($sqlQuery);
+          echo '</pre>'; 
 
         $status = $statement->execute($params);
 
@@ -124,29 +118,3 @@ class BranchTableGateway {
     }
 
 }
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-        

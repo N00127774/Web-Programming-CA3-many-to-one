@@ -46,7 +46,7 @@ $statement = $gateway->getCustomers();
 
 
 
-        <div class="container-fluid"><!-- start of :container -->
+        <div class="container-fluid">
             <div class="row">	<!-- row 1: navigation -->
 
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -59,8 +59,9 @@ $statement = $gateway->getCustomers();
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand hidden-xs" href="index.php">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""> </a>
-                            <a class="navbar-brand visible-xs" href="index.php"> <p> ASPM | AGENCY</p></a>
+                            <a class="navbar-brand hidden-xs " href="index.php">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""> </a>
+                            <a class="navbar-brand visible-xs " href="index.php"> <p> ASPM | AGENCY</p></a>
+
                         </div>
 
                         <div class="collapse navbar-collapse" id="collapse">
@@ -78,14 +79,14 @@ $statement = $gateway->getCustomers();
                         </div>
                     </div>
             </div>
-        </nav>	<!-- end row1: navigation -->
+        </nav>
 
 
 
 
-        <div class="col-lg-2 col-md-2 sidebar visible-lg"> <!-- sidebar -->
-             
-            <ul class="nav nav-sidebar">  <!-- nav-sidebar -->
+        <div class="col-lg-2 col-md-2 sidebar visible-lg">
+
+            <ul class="nav nav-sidebar"><!-- nav-sidebar -->
                 <h3> Welcome</h3>
                 <li><img src="img/beardGame.jpg" class="img img-circle usericon img-responsive"></li>
 
@@ -115,165 +116,110 @@ $statement = $gateway->getCustomers();
 
 
 
-            </ul><!-- end of nav-sidebar -->
+            </ul><!--  End of nav-sidebar -->
         </div><!-- sidebar -->
 
 
 
 
-         <!-- Dashboard -->
+
         <div class="col-lg-10 col-md-12 Details">
-            <h1 class="page-header">Dashboard</h1>
-            <div class="row placeholders Dashboard">
+            <h1 class="page-header ">Customer Table</h1>
+            <div class="row placeholders">
 
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="thumbnail text-center adminoptions CustomerBG">
 
-                    <a href="viewCustomers.php " class="buttonsforTables"> 
-                        <div class="thumbnail text-center adminoptions CustomerBG">
-
-                            <span class="glyphicon glyphicon-user customers"></span>
+                        <span class="glyphicon glyphicon-user customers"></span>
 
 
-                            <h2>20,000</h2>
-                            <h4> Customers</h4>
-                        </div>
-                    </a>
+                        <h2>20,000</h2>
+                        <h4> Customers</h4>
 
 
-                </div>
 
 
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <a>
-                        <div class="thumbnail text-center adminoptions BranchesBG">
-                            <img src="img/webBuilding.png" class="img-responsive adminoptionicons">
-                            <h2>500</h2>
-                            <h4> Branches</h4>
-                        </div>
-                    </a>
+
+
+                    </div>
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <a>
-                        <div class="thumbnail text-center adminoptions SalesBG">
-                            <span class="glyphicon glyphicon-signal"></span>
-                            <h2>200,000</h2>
-                            <h4>Sales</h4>
-                        </div>
-                    </a>
+                    <div class="thumbnail text-center adminoptions BranchesBG">
+                        <img src="img/webBuilding.png" class="img-responsive adminoptionicons">
+                        <h2>500</h2>
+                        <h4> Branches</h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="thumbnail text-center adminoptions SalesBG">
+                        <span class="glyphicon glyphicon-signal"></span>
+                        <h2>200,000</h2>
+                        <h4>Sales</h4>
+                    </div>
                 </div>
 
 
 
             </div>
 
-            <div class="row Charts"><!-- Barchat and Line Graph-->
-                <div class= "graph">
-
-                    <h3> Sales 2010-2013</h3>
-                    <img src="img/graph.png" class="img-responsive">
-
-                </div>
-            </div>
-
-            <div class="table-responsive col-lg-12">
-
-                <table class="table table-striped Member">
-                    <h1>MANAGERS</h1>
+            <h3 class="page-header">Customers Details</h3>
+            <div class="table-responsive">
+                <table class="table table-striped ">
                     <thead>
                         <tr>
                             <!-- the different headers inside a table-->
-                            <th>ID</th>
                             <th>Name</th>
-                            <th>Balance</th>
-                            <th>Subscription</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Address</th>
+                            <th>Date Registered</th>
+                            <th> Customer ID</th>
+                            <th>Manager Name</th>
 
-                        <tr>
-                            <td> <a>IR531</a></td>
-                            <td> Jameson Blackson </td>
-                            <td>€32,000</td>
-                            <td> <span class="badge green">Secretary</span></td>
-
-                        </tr>
-
-                        <tr>
-                            <td> <a>IR532</a></td>
-                            <td>Scott S. Calabrese </td>
-                            <td>€39,000</td>
-                            <td> <span class="badge blue">Asset Management</span></td>
+                            <th> Options</th>
 
                         </tr>
-
-
-                        <tr>
-                            <td> <a>IR533</a></td>
-                            <td> Chester Abllera</td>
-                            <td>€45,000</td>
-                            <td> <span class="badge light-purple">Manager</span></td>
-
-                        </tr>
-
-                        <tr>
-                            <td> <a>IR534</a></td>
-                            <td> Joshua Hayes</td>
-                            <td>€35,000</td>
-                            <td> <span class="badge green ">Stock Manager</span></td>
-
-                        </tr>
-
-                        <tr>
-                            <td> <a>IR535</a></td>
-                            <td> Teresa L. Doe</td>
-                            <td>€50,000</td>
-                            <td> <span class="badge blue ">Branch Manager</span></td>
-
-                        </tr>
-
-
-                        <tr>
-                            <td> <a>IR536</a></td>
-                            <td> Lucy Doe</td>
-                            <td>€53,000</td>
-                            <td> <span class="badge light-purple">Area Manager</span></td>
-
-                        </tr>
-
-                        <tr>
-                            <td> <a>IR537</a></td>
-                            <td>Charles S Boyle</td>
-                            <td>€56,000</td>
-                            <td> <span class="badge green">Facility  Manager</span></td>
-
-                        </tr>
-
-                        <tr>
-                            <td> <a>IR538</a></td>
-                            <td>Paul Aguillier</td>
-                            <td>€58,000</td>
-                            <td> <span class="badge blue">HR Director</span></td>
-
-                        </tr>
-
-
-
-
-
                     </thead>
+
                     <tbody>
-                </table> <!-- End OF TABLE -->
+                        <?php
+                        $row = $statement->fetch(PDO::FETCH_ASSOC);
+                        while ($row) {
 
 
-            </div><!-- End OF TABLE Responsive -->
+                            echo '<td>' . $row['name'] . '</td>';
+                            echo '<td>' . $row['email'] . '</td>';
+                            echo '<td>' . $row['mobileNumber'] . '</td>';
+                            echo '<td>' . $row['address'] . '</td>';
+                            echo '<td>' . $row['dateRegistered'] . '</td>';
+                            echo '<td>' . $row['customerID'] . '</td>';
+                            echo '<td>' . $row['managerName'] . '</td>';
+
+                            // this is to see the view/delete links in my home page with the list of customers
+                            echo '<td>'
+                            . '<a href="viewCustomer.php?id=' . $row['customerID'] . '"><button span class = "glyphicon glyphicon-search  btn btn-search"></span></button></a> '
+                            . '<a href="editCustomerForm.php?id=' . $row['customerID'] . '"><button span class = "glyphicon glyphicon glyphicon-edit btn btn-edit"></span></button></a> '
+                            . '<a class="deleteCustomer" href="deleteCustomer.php?id=' . $row['customerID'] . '"><button span class = "glyphicon glyphicon-trash btn btn-delete"></span></button></a> '
+                            . '</td>';
+                            echo '</tr>';
 
 
 
+                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                        }
+                        ?>
+                    </tbody>
 
+                </table>
+       <button type="button" class="btn btn-submit "><a href="createCustomerForm.php">Create Customer</a></button>    <!--<p><a href="viewBranches.php">viewBranches</a></p>-->
+            </div>
+        </div>
 
+    </div>
 
-        </div> <!-- Dashboard -->
-
-    </div> <!--End of Container -->
 
 
 

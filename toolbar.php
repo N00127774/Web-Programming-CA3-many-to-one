@@ -7,9 +7,7 @@ if ($session_id == "") {
 }
 
 if (isset($_SESSION['username'])) {
-    echo '<p><a href="home.php">Home</a></p>';
-    echo '<p><a href="logout.php">Logout</a></p>';
+    echo '<a href="logout.php">Logout <span class="glyphicon glyphicon-off"></span></a>';
 } else {
-    echo '<p><a href="index.php">Home</a></p>';
-    echo '<p><a href="login.php">Login</a></p>';
+    echo '<a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a>';
 }

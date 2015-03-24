@@ -34,13 +34,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""></a>
+                    <a class="navbar-brand" href="FirstPage.php">  <img src= "img/piechart.png" class="img-responsive BigLogo " alt=""></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="container-fluid">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Home <span class=" glyphicon glyphicon-home"></span></a></li>
+                            <li><a href=" FirstPage.php ">Home <span class=" glyphicon glyphicon-home"></span></a></li>
                             <li><a href="#">About US <span class=" glyphicon glyphicon-user "></span></a></li>
                             <li><a href="#">Sign Up <span class=" glyphicon glyphicon-pencil "></span></a></li>
                             <li><a href="#">Contact Us <span class=" glyphicon glyphicon-envelope "></span></a> </li>
