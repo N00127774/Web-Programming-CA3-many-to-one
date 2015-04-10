@@ -8,13 +8,17 @@ class CustomerTableGateway {
         $this->connection = $c;
     }
 
-    public function getCustomers() {
+    public function getCustomers($sortOrder) {
         // execute a query to get all customers
         $sqlQuery = "SELECT c.*, b.managerName As managerName 
                      FROM   customers c
-                     LEFT JOIN branches b ON b.branchID = c.branchID" ;
+                     LEFT JOIN branches b ON b.branchID = c.branchID
+                     ORDER BY ". $sortOrder;
+                    
 
         $statement = $this->connection->prepare($sqlQuery);
+      
+        
         $status = $statement->execute();
 
         if (!$status) {
@@ -24,6 +28,29 @@ class CustomerTableGateway {
         return $statement;
     }
 
+        public function getCustomersByBranchID($branchID) {
+        // execute a query to get all customers
+        $sqlQuery = "SELECT c.*, b.managerName As managerName 
+                     FROM   customers c
+                     LEFT JOIN branches b ON b.branchID = c.branchID 
+                     WHERE b.branchID = :branchID";
+        
+        $params = array (
+            'branchID' => $branchID
+        );
+        $statement = $this->connection->prepare($sqlQuery);
+        $status = $statement->execute($params);
+
+        if (!$status) {
+            die("Could not retrieve users");
+        }
+
+        return $statement;
+    }
+
+    
+    
+    
     public function getCustomerById($customerID) {
         // execute a query to get the user with the specified id
         $sqlQuery =  "SELECT c.*, b.managerName  
@@ -96,7 +123,7 @@ class CustomerTableGateway {
     }
 
     //function to update the customer
-    public function updateCustomer($n, $e, $m, $a, $d,  $bID, $cID) {
+    public function updateCustomer($n, $e, $m, $a, $d, $cID, $bID) {
         $sqlQuery = "UPDATE customers SET " .
                 "name = :name, " .
                 "email = :email, " .
@@ -114,7 +141,7 @@ class CustomerTableGateway {
             "address" => $a,
             "dateRegistered" => $d,
             "branchID" => $bID,
-            "customerID"=> $cID
+            "customerID" => $cID
             
         );
 

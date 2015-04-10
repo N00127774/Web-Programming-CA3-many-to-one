@@ -34,6 +34,10 @@ $dateRegistered = $_POST['dateRegistered'];
 $customerID = $_POST['id'];
 $branchID = $_POST['branchID'];
 
+
+if($branchID == -1){
+    $branchID = Null;
+}
 $gateway->updateCustomer($name, $email, $mobileNumber, $address, $dateRegistered, $customerID, $branchID);
 
 header('Location: home.php');

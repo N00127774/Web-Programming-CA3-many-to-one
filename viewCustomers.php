@@ -5,10 +5,21 @@ require_once 'Connection.php';
 require_once 'CustomerTableGateway.php';
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder'])){
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("name", "email", "mobileNumber", "address", "dateRegistered", "customerID","managerName");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder='name';
+    }
+}
+
+else{
+    $sortOrder='name';
+}
 $connection = Connection::getInstance();
 $gateway = new CustomerTableGateway($connection);
 
-$statement = $gateway->getCustomers();
+$statement = $gateway->getCustomers($sortOrder);
 ?>
 
 <!DOCTYPE html>
@@ -171,13 +182,13 @@ $statement = $gateway->getCustomers();
                     <thead>
                         <tr>
                             <!-- the different headers inside a table-->
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Address</th>
-                            <th>Date Registered</th>
-                            <th> Customer ID</th>
-                            <th>Manager Name</th>
+                            <th><a href ="viewCustomers.php?sortOrder=name">Name</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=email">Email</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=mobileNumber">Mobile</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=address">Address</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=dateRegistered">Date Registered</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=customerID">Customer ID</a></th>
+                            <th><a href ="viewCustomers.php?sortOrder=managerName">Manager Name</a></th>
 
                             <th> Options</th>
 
@@ -214,7 +225,7 @@ $statement = $gateway->getCustomers();
                     </tbody>
 
                 </table>
-       <button type="button" class="btn btn-submit "><a href="createCustomerForm.php">Create Customer</a></button>    <!--<p><a href="viewBranches.php">viewBranches</a></p>-->
+       <button type="button" class="btn btn-submit "><a href="createCustomerForm.php">Create Customer</a></button>    <p><a href="viewBranches.php">viewBranches</a></p>
             </div>
         </div>
 

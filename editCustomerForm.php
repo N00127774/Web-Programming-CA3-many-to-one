@@ -2,6 +2,7 @@
 require_once 'Customer.php';
 require_once 'Connection.php';
 require_once 'CustomerTableGateway.php';
+require_once 'BranchTableGateway.php';
 
 $id = session_id();
 if ($id == "") {
@@ -18,11 +19,18 @@ $id = $_GET['id'];
 $connection = Connection::getInstance();
 $gateway = new CustomerTableGateway($connection);
 
+$branchGateway = new BranchTableGateway($connection);
+
+
+
 $statement = $gateway->getCustomerById($id);
 if ($statement->rowCount() !== 1) {
     die("Illegal request");
 }
+
 $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+$branches = $branchGateway->getBranchs();
 ?>
 <!DOCTYPE html>
 <html>
@@ -274,23 +282,24 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                 </td>
                             </tr>
                             <tr>
-                                <th>Branch ID </th>
-                                <td>
-                                    <input type="text" name="branchID" value="<?php
-                                    if (isset($_POST) && isset($_POST['branchID'])) {
-                                        echo $_POST['branchID'];
-                                    } else
-                                        echo $row['branchID'];
-                                    ?>" />
-                                    <span id="branchID" class="error">
-                                        <?php
-                                        if (isset($errorMessage) && isset($errorMessage['branchID'])) {
-                                            echo $errorMessage['branchID'];
+                            <th>Manager Name</th>
+                            <td>
+                                <select name="branchID">
+                                    <option value="-1">No Manager</option>
+                                    <?php
+                                    $b = $branches->fetch(PDO::FETCH_ASSOC);
+                                    while ($b) {
+                                        $selected = "";
+                                        if($b['branchID']== $row['branchID']){
+                                          $selected = "selected";
                                         }
-                                        ?>
-                                    </span>
-                                </td>
-                            </tr>
+                                        echo '<option value = "' . $b['branchID'] . '" '. $selected .'>' . $b['managerName'] . '</option>';
+                                        $b = $branches->fetch(PDO::FETCH_ASSOC);
+                                    }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
                             <tr>
                                 <td>
                                     <input type="submit" value="Update Customer" name="updateCustomer" class="btn btn-submit" />

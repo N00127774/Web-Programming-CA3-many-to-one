@@ -216,6 +216,11 @@ $statement = $gateway->getCustomerById($customerID);
 
                         echo '</tr>';
                         echo '<tr>';
+                        echo '<th>Manager Name</th>'
+                        . '<td>' . $row['managerName'] . '</td>';
+
+
+                        echo '</tr>';
                         ?>
                     </tbody>
                 </table> <!-- End of table -->

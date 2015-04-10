@@ -5,10 +5,23 @@ require_once 'Connection.php';
 require_once 'CustomerTableGateway.php';
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder'])){
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("name", "email", "mobileNumber", "address", "dateRegistered", "customerID","managerName");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder='name';
+    }
+}
+
+else{
+    $sortOrder='name';
+}
+
+
 $connection = Connection::getInstance();
 $gateway = new CustomerTableGateway($connection);
 
-$statement = $gateway->getCustomers();
+$statement = $gateway->getCustomers($sortOrder);
 ?>
 
 <!DOCTYPE html>
@@ -145,7 +158,7 @@ $statement = $gateway->getCustomers();
 
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <a>
+                    <a href="viewBranches.php" class ="buttonsforTables">
                         <div class="thumbnail text-center adminoptions BranchesBG">
                             <img src="img/webBuilding.png" class="img-responsive adminoptionicons">
                             <h2>500</h2>
