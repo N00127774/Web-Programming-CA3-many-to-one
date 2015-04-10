@@ -8,9 +8,10 @@ class BranchTableGateway {
         $this->connection = $c;
     }
 
-    public function getBranchs() {
+    public function getBranchs($sortOrder) {
         // execute a query to get all customers
-        $sqlQuery = "SELECT * FROM branches";
+        $sqlQuery = "SELECT * FROM branches
+                    ORDER BY ". $sortOrder;
 
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();

@@ -5,10 +5,25 @@ require_once 'Connection.php';
 require_once 'BranchTableGateway.php';
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder'])){
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("branchID", "address", "number", "openingHours", "dateRegistered", "managerName");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder='branchID';
+    }
+}
+
+else{
+    $sortOrder='branchID';
+}
+
+
+
+
 $connection = Connection::getInstance();
 $gateway = new BranchTableGateway($connection);
 
-$statement = $gateway->getBranchs();
+$statement = $gateway->getBranchs($sortOrder);
 ?>
 
 <!DOCTYPE html>
@@ -171,11 +186,11 @@ $statement = $gateway->getBranchs();
                     <thead>
                         <tr>
                             <!-- the different headers inside a table-->
-                            <th>branchID</th>
-                            <th>address</th>
-                            <th>number</th>
-                            <th>openingHours</th>
-                            <th>managerName</th>
+                            <th><a href ="viewBranches.php?sortOrder=branchID">branchID</th>
+                            <th><a href ="viewBranches.php?sortOrder=address">address</th>
+                            <th><a href ="viewBranches.php?sortOrder=number">number</th>
+                            <th><a href ="viewBranches.php?sortOrder=OpeningHours">openingHours</th>
+                            <th><a href ="viewBranches.php?sortOrder=managerName">managerName</th>
 
 
                             <th> Options</th>
