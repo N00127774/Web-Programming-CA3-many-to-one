@@ -124,7 +124,7 @@ $statement = $gateway->getBranchs();
 
 
         <div class="col-lg-10 col-md-12">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">Branch Table</h1>
             <div class="row placeholders">
 
 
@@ -212,7 +212,7 @@ $statement = $gateway->getBranchs();
                     </tbody>
 
                 </table>
-                <p><a href="viewBranches.php">viewBranches</a></p>
+         <button type="button" class="btn btn-submit "><a href="createBranchForm.php">Create Branch</a></button> 
             </div>
         </div>
 
